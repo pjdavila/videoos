@@ -224,7 +224,7 @@ export default function Home() {
       />
 
       {/* Nav */}
-      <header className="relative z-10 flex items-center justify-between px-6 py-5 md:px-12 lg:px-20">
+      <header className="relative z-10 flex items-center justify-between px-5 py-4 sm:px-6 sm:py-5 md:px-12 lg:px-20">
         <div className="flex items-center gap-2">
           <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-blue-500 to-purple-600" />
           <span className="text-lg font-semibold tracking-tight text-foreground">
@@ -255,7 +255,7 @@ export default function Home() {
       </header>
 
       {/* Hero */}
-      <main className="relative z-10 flex flex-1 flex-col items-center justify-center px-6 text-center">
+      <main className="relative z-10 flex flex-1 flex-col items-center justify-center px-5 py-16 text-center sm:px-6 sm:py-20 md:py-0">
         {/* Pill badge */}
         <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-sm text-muted-foreground backdrop-blur-sm">
           <span className="h-1.5 w-1.5 rounded-full bg-blue-500" />
@@ -302,7 +302,7 @@ export default function Home() {
       </main>
 
       {/* ─── Product Suite ─── */}
-      <section id="product" className="relative z-10 px-6 py-32 md:px-12 lg:px-20">
+      <section id="product" className="relative z-10 px-5 py-20 sm:px-6 sm:py-28 md:px-12 md:py-32 lg:px-20">
         {/* Section glow */}
         <div className="pointer-events-none absolute left-1/2 top-0 h-[500px] w-[800px] -translate-x-1/2 rounded-full bg-[radial-gradient(ellipse_at_center,oklch(0.4_0.15_265/0.08),transparent_70%)] blur-3xl" />
 
@@ -361,7 +361,7 @@ export default function Home() {
       {/* ─── How It Works ─── */}
       <section
         id="how-it-works"
-        className="relative z-10 px-6 py-32 md:px-12 lg:px-20"
+        className="relative z-10 px-5 py-20 sm:px-6 sm:py-28 md:px-12 md:py-32 lg:px-20"
       >
         {/* Section glow */}
         <div className="pointer-events-none absolute right-1/4 top-1/2 h-[400px] w-[600px] -translate-y-1/2 rounded-full bg-[radial-gradient(ellipse_at_center,oklch(0.45_0.18_290/0.06),transparent_70%)] blur-3xl" />
@@ -436,7 +436,7 @@ export default function Home() {
       </section>
 
       {/* ─── Business Outcomes ─── */}
-      <section className="relative z-10 px-6 py-32 md:px-12 lg:px-20">
+      <section className="relative z-10 px-5 py-20 sm:px-6 sm:py-28 md:px-12 md:py-32 lg:px-20">
         <div className="pointer-events-none absolute left-1/2 top-1/2 h-[500px] w-[700px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(ellipse_at_center,oklch(0.4_0.18_280/0.06),transparent_70%)] blur-3xl" />
 
         <div className="relative mx-auto max-w-6xl">
@@ -488,7 +488,7 @@ export default function Home() {
       </section>
 
       {/* ─── Social Proof ─── */}
-      <section className="relative z-10 px-6 py-32 md:px-12 lg:px-20">
+      <section className="relative z-10 px-5 py-20 sm:px-6 sm:py-28 md:px-12 md:py-32 lg:px-20">
         <div className="pointer-events-none absolute left-1/4 top-0 h-[400px] w-[600px] rounded-full bg-[radial-gradient(ellipse_at_center,oklch(0.45_0.15_265/0.05),transparent_70%)] blur-3xl" />
 
         <div className="relative mx-auto max-w-6xl">
@@ -552,7 +552,7 @@ export default function Home() {
       </section>
 
       {/* ─── Resources ─── */}
-      <section className="relative z-10 px-6 py-32 md:px-12 lg:px-20">
+      <section className="relative z-10 px-5 py-20 sm:px-6 sm:py-28 md:px-12 md:py-32 lg:px-20">
         <div className="pointer-events-none absolute right-1/3 top-1/2 h-[400px] w-[500px] -translate-y-1/2 rounded-full bg-[radial-gradient(ellipse_at_center,oklch(0.4_0.12_259/0.06),transparent_70%)] blur-3xl" />
 
         <div className="relative mx-auto max-w-5xl">
@@ -596,7 +596,7 @@ export default function Home() {
       </section>
 
       {/* ─── Final CTA ─── */}
-      <section className="relative z-10 px-6 py-32 md:px-12 lg:px-20">
+      <section className="relative z-10 px-5 py-20 sm:px-6 sm:py-28 md:px-12 md:py-32 lg:px-20">
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-blue-500/[0.03] to-transparent" />
 
         <AnimateOnScroll>
@@ -633,11 +633,11 @@ export default function Home() {
       </section>
 
       {/* ─── Footer ─── */}
-      <footer className="relative z-10 border-t border-white/[0.06] px-6 py-16 md:px-12 lg:px-20">
+      <footer className="relative z-10 border-t border-white/[0.06] px-5 py-12 sm:px-6 sm:py-16 md:px-12 lg:px-20">
         <div className="mx-auto max-w-6xl">
-          <div className="grid gap-12 md:grid-cols-4">
+          <div className="grid grid-cols-2 gap-10 sm:gap-12 md:grid-cols-4">
             {/* Brand */}
-            <div className="md:col-span-1">
+            <div className="col-span-2 md:col-span-1">
               <div className="flex items-center gap-2">
                 <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-blue-500 to-purple-600" />
                 <span className="text-lg font-semibold tracking-tight text-foreground">
