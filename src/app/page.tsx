@@ -12,6 +12,14 @@ import {
   DollarSign,
   Sparkles,
   Zap,
+  Clock,
+  Layers,
+  TrendingUp,
+  Quote,
+  BookOpen,
+  Code2,
+  FileText,
+  ExternalLink,
 } from "lucide-react";
 
 const capabilities = [
@@ -77,6 +85,92 @@ const capabilities = [
     accent: "from-orange-500/20 to-orange-600/5",
     iconColor: "text-orange-400",
     borderGlow: "group-hover:shadow-orange-500/10",
+  },
+];
+
+const outcomes = [
+  {
+    metric: "10x",
+    label: "Content Output",
+    description:
+      "One video becomes dozens of optimized assets — shorts, reels, audiograms, blog posts, and social cards.",
+    icon: Layers,
+    gradient: "from-blue-500 to-cyan-500",
+  },
+  {
+    metric: "90%",
+    label: "Time Saved",
+    description:
+      "Eliminate manual editing, transcription, and distribution. What took days now happens in minutes.",
+    icon: Clock,
+    gradient: "from-purple-500 to-pink-500",
+  },
+  {
+    metric: "3x",
+    label: "Revenue Growth",
+    description:
+      "Maximize reach and monetization across every channel with AI-optimized publishing and performance tracking.",
+    icon: TrendingUp,
+    gradient: "from-emerald-500 to-teal-500",
+  },
+];
+
+const testimonials = [
+  {
+    quote:
+      "VideoOS turned our weekly podcast into 47 pieces of content. Our social engagement tripled in the first month.",
+    author: "Sarah Chen",
+    role: "VP of Content, ScaleUp Media",
+    avatar: "SC",
+  },
+  {
+    quote:
+      "We went from publishing 3 videos a week to 30+ clips across all platforms — with the same team. The ROI is unreal.",
+    author: "Marcus Rivera",
+    role: "Head of Growth, StreamNow",
+    avatar: "MR",
+  },
+  {
+    quote:
+      "The AI analysis and auto-clipping alone saved us two full-time editor positions. VideoOS pays for itself in a week.",
+    author: "Aisha Patel",
+    role: "CTO, CreatorStack",
+    avatar: "AP",
+  },
+];
+
+const logoNames = [
+  "ScaleUp Media",
+  "StreamNow",
+  "CreatorStack",
+  "VidFlow",
+  "ContentAI",
+  "MediaPulse",
+  "ClipLogic",
+  "BroadcastHQ",
+];
+
+const resources = [
+  {
+    icon: BookOpen,
+    title: "Documentation",
+    description: "Comprehensive guides, tutorials, and API reference to get you building fast.",
+    link: "#",
+    linkText: "Read the docs",
+  },
+  {
+    icon: Code2,
+    title: "API Reference",
+    description: "RESTful APIs and SDKs for Python, Node.js, and Go. Ship integrations in hours.",
+    link: "#",
+    linkText: "Explore the API",
+  },
+  {
+    icon: FileText,
+    title: "Blog & Updates",
+    description: "Product announcements, engineering deep dives, and customer stories.",
+    link: "#",
+    linkText: "Read the blog",
   },
 ];
 
@@ -340,6 +434,333 @@ export default function Home() {
           </AnimateOnScroll>
         </div>
       </section>
+
+      {/* ─── Business Outcomes ─── */}
+      <section className="relative z-10 px-6 py-32 md:px-12 lg:px-20">
+        <div className="pointer-events-none absolute left-1/2 top-1/2 h-[500px] w-[700px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(ellipse_at_center,oklch(0.4_0.18_280/0.06),transparent_70%)] blur-3xl" />
+
+        <div className="relative mx-auto max-w-6xl">
+          <AnimateOnScroll className="text-center">
+            <p className="mb-4 text-sm font-medium uppercase tracking-widest text-emerald-400">
+              Real results
+            </p>
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
+              Built for{" "}
+              <span className="bg-gradient-to-r from-emerald-400 to-blue-400 bg-clip-text text-transparent">
+                measurable impact
+              </span>
+            </h2>
+            <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
+              Teams using VideoOS see transformative improvements across content
+              output, operational efficiency, and revenue.
+            </p>
+          </AnimateOnScroll>
+
+          <div className="mt-16 grid gap-6 md:grid-cols-3">
+            {outcomes.map((outcome, i) => (
+              <AnimateOnScroll key={outcome.label} delay={i * 100}>
+                <div className="group relative overflow-hidden rounded-2xl border border-white/[0.06] bg-white/[0.02] p-8 backdrop-blur-sm transition-all duration-300 hover:border-white/[0.12] hover:bg-white/[0.04]">
+                  <div className="pointer-events-none absolute -right-8 -top-8 h-32 w-32 rounded-full bg-gradient-to-br from-white/[0.03] to-transparent blur-2xl transition-opacity duration-300 group-hover:opacity-150" />
+
+                  <div
+                    className={`mb-6 inline-flex rounded-xl bg-gradient-to-br ${outcome.gradient} p-3 shadow-lg`}
+                  >
+                    <outcome.icon className="h-5 w-5 text-white" />
+                  </div>
+
+                  <div
+                    className={`bg-gradient-to-r ${outcome.gradient} bg-clip-text text-5xl font-extrabold tracking-tight text-transparent md:text-6xl`}
+                  >
+                    {outcome.metric}
+                  </div>
+
+                  <h3 className="mt-2 text-lg font-semibold text-foreground">
+                    {outcome.label}
+                  </h3>
+                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                    {outcome.description}
+                  </p>
+                </div>
+              </AnimateOnScroll>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ─── Social Proof ─── */}
+      <section className="relative z-10 px-6 py-32 md:px-12 lg:px-20">
+        <div className="pointer-events-none absolute left-1/4 top-0 h-[400px] w-[600px] rounded-full bg-[radial-gradient(ellipse_at_center,oklch(0.45_0.15_265/0.05),transparent_70%)] blur-3xl" />
+
+        <div className="relative mx-auto max-w-6xl">
+          {/* Logo strip */}
+          <AnimateOnScroll className="text-center">
+            <p className="mb-10 text-sm font-medium uppercase tracking-widest text-muted-foreground/60">
+              Trusted by leading content teams
+            </p>
+            <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-6">
+              {logoNames.map((name) => (
+                <div
+                  key={name}
+                  className="text-sm font-semibold tracking-wide text-muted-foreground/30 transition-colors duration-300 hover:text-muted-foreground/60"
+                >
+                  {name}
+                </div>
+              ))}
+            </div>
+          </AnimateOnScroll>
+
+          {/* Testimonials */}
+          <div className="mt-20">
+            <AnimateOnScroll className="text-center">
+              <p className="mb-4 text-sm font-medium uppercase tracking-widest text-blue-400">
+                What teams are saying
+              </p>
+              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
+                Don&apos;t take our word for it
+              </h2>
+            </AnimateOnScroll>
+
+            <div className="mt-14 grid gap-6 md:grid-cols-3">
+              {testimonials.map((t, i) => (
+                <AnimateOnScroll key={t.author} delay={i * 100}>
+                  <div className="group relative flex h-full flex-col rounded-2xl border border-white/[0.06] bg-white/[0.02] p-6 backdrop-blur-sm transition-all duration-300 hover:border-white/[0.12] hover:bg-white/[0.04]">
+                    <Quote className="mb-4 h-5 w-5 text-blue-500/40" />
+
+                    <p className="flex-1 text-sm leading-relaxed text-muted-foreground">
+                      &ldquo;{t.quote}&rdquo;
+                    </p>
+
+                    <div className="mt-6 flex items-center gap-3 border-t border-white/[0.06] pt-5">
+                      <div className="flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br from-blue-500/20 to-purple-500/20 text-xs font-semibold text-blue-300">
+                        {t.avatar}
+                      </div>
+                      <div>
+                        <p className="text-sm font-medium text-foreground">
+                          {t.author}
+                        </p>
+                        <p className="text-xs text-muted-foreground">
+                          {t.role}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </AnimateOnScroll>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ─── Resources ─── */}
+      <section className="relative z-10 px-6 py-32 md:px-12 lg:px-20">
+        <div className="pointer-events-none absolute right-1/3 top-1/2 h-[400px] w-[500px] -translate-y-1/2 rounded-full bg-[radial-gradient(ellipse_at_center,oklch(0.4_0.12_259/0.06),transparent_70%)] blur-3xl" />
+
+        <div className="relative mx-auto max-w-5xl">
+          <AnimateOnScroll className="text-center">
+            <p className="mb-4 text-sm font-medium uppercase tracking-widest text-purple-400">
+              Developer-first
+            </p>
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
+              Everything you need to{" "}
+              <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                start building
+              </span>
+            </h2>
+          </AnimateOnScroll>
+
+          <div className="mt-14 grid gap-6 md:grid-cols-3">
+            {resources.map((r, i) => (
+              <AnimateOnScroll key={r.title} delay={i * 100}>
+                <a
+                  href={r.link}
+                  className="group relative flex h-full flex-col rounded-2xl border border-white/[0.06] bg-white/[0.02] p-6 backdrop-blur-sm transition-all duration-300 hover:border-white/[0.12] hover:bg-white/[0.04]"
+                >
+                  <div className="mb-4 inline-flex rounded-xl border border-white/[0.06] bg-white/[0.03] p-2.5 text-purple-400 transition-colors duration-300 group-hover:text-purple-300">
+                    <r.icon className="h-5 w-5" />
+                  </div>
+                  <h3 className="mb-2 text-lg font-semibold text-foreground">
+                    {r.title}
+                  </h3>
+                  <p className="flex-1 text-sm leading-relaxed text-muted-foreground">
+                    {r.description}
+                  </p>
+                  <div className="mt-4 flex items-center gap-1.5 text-sm font-medium text-purple-400 transition-colors group-hover:text-purple-300">
+                    {r.linkText}
+                    <ExternalLink className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
+                  </div>
+                </a>
+              </AnimateOnScroll>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ─── Final CTA ─── */}
+      <section className="relative z-10 px-6 py-32 md:px-12 lg:px-20">
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-blue-500/[0.03] to-transparent" />
+
+        <AnimateOnScroll>
+          <div className="relative mx-auto max-w-3xl text-center">
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
+              Ready to transform your{" "}
+              <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                video workflow
+              </span>
+              ?
+            </h2>
+            <p className="mx-auto mt-6 max-w-xl text-lg text-muted-foreground">
+              Join the teams already using VideoOS to produce, scale, and
+              monetize video content at unprecedented speed.
+            </p>
+            <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+              <Button
+                size="lg"
+                className="group h-12 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 px-8 text-base font-medium text-white shadow-lg shadow-blue-500/20 transition-all hover:shadow-xl hover:shadow-blue-500/30"
+              >
+                Book a Demo
+                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+              </Button>
+              <Button
+                variant="outline"
+                size="lg"
+                className="h-12 rounded-full border-white/10 bg-white/5 px-8 text-base font-medium backdrop-blur-sm hover:bg-white/10"
+              >
+                Talk to Sales
+              </Button>
+            </div>
+          </div>
+        </AnimateOnScroll>
+      </section>
+
+      {/* ─── Footer ─── */}
+      <footer className="relative z-10 border-t border-white/[0.06] px-6 py-16 md:px-12 lg:px-20">
+        <div className="mx-auto max-w-6xl">
+          <div className="grid gap-12 md:grid-cols-4">
+            {/* Brand */}
+            <div className="md:col-span-1">
+              <div className="flex items-center gap-2">
+                <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-blue-500 to-purple-600" />
+                <span className="text-lg font-semibold tracking-tight text-foreground">
+                  VideoOS
+                </span>
+              </div>
+              <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+                The operating system for AI-powered video. Ingest, analyze,
+                repurpose, and monetize — all from one platform.
+              </p>
+            </div>
+
+            {/* Product */}
+            <div>
+              <h4 className="mb-4 text-sm font-semibold uppercase tracking-wider text-foreground">
+                Product
+              </h4>
+              <ul className="space-y-3 text-sm text-muted-foreground">
+                <li>
+                  <a href="#" className="transition-colors hover:text-foreground">
+                    Features
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="transition-colors hover:text-foreground">
+                    Pricing
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="transition-colors hover:text-foreground">
+                    Integrations
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="transition-colors hover:text-foreground">
+                    API
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            {/* Company */}
+            <div>
+              <h4 className="mb-4 text-sm font-semibold uppercase tracking-wider text-foreground">
+                Company
+              </h4>
+              <ul className="space-y-3 text-sm text-muted-foreground">
+                <li>
+                  <a href="#" className="transition-colors hover:text-foreground">
+                    About
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="transition-colors hover:text-foreground">
+                    Blog
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="transition-colors hover:text-foreground">
+                    Careers
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="transition-colors hover:text-foreground">
+                    Contact
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            {/* Legal */}
+            <div>
+              <h4 className="mb-4 text-sm font-semibold uppercase tracking-wider text-foreground">
+                Legal
+              </h4>
+              <ul className="space-y-3 text-sm text-muted-foreground">
+                <li>
+                  <a href="#" className="transition-colors hover:text-foreground">
+                    Privacy Policy
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="transition-colors hover:text-foreground">
+                    Terms of Service
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="transition-colors hover:text-foreground">
+                    Security
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Bottom bar */}
+          <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-white/[0.06] pt-8 md:flex-row">
+            <p className="text-xs text-muted-foreground/50">
+              &copy; {new Date().getFullYear()} VideoOS. All rights reserved.
+            </p>
+            <div className="flex items-center gap-6">
+              <a
+                href="#"
+                className="text-xs text-muted-foreground/50 transition-colors hover:text-muted-foreground"
+              >
+                Twitter
+              </a>
+              <a
+                href="#"
+                className="text-xs text-muted-foreground/50 transition-colors hover:text-muted-foreground"
+              >
+                LinkedIn
+              </a>
+              <a
+                href="#"
+                className="text-xs text-muted-foreground/50 transition-colors hover:text-muted-foreground"
+              >
+                GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
